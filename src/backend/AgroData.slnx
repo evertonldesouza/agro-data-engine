@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="AgroData.API/AgroData.API.csproj" />
+  <Project Path="AgroData.Application/AgroData.Application.csproj" />
+  <Project Path="AgroData.Domain/AgroData.Domain.csproj" />
+  <Project Path="AgroData.Infrastructure/AgroData.Infrastructure.csproj" />
+</Solution>
