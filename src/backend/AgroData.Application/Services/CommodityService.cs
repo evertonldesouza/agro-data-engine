@@ -1,6 +1,6 @@
 using AgroData.Application.DTOs;
 using AgroData.Application.Interfaces;
-using AgroData.Domain.Interfaces; // Usa a interface que você criou no Domain
+using AgroData.Domain.Interfaces;
 
 namespace AgroData.Application.Services;
 

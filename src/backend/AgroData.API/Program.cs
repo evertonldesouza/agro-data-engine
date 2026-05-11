@@ -12,10 +12,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(connectionString));
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddScoped<ICommodityRepository, CommodityRepository>();
-builder.Services.AddScoped<ICommodityService, CommodityService>();
 
 builder.Services.AddCors(options =>
 {
@@ -28,8 +24,15 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
+builder.Services.AddScoped<ICommodityRepository, CommodityRepository>();
+builder.Services.AddScoped<ICommodityService, CommodityService>();
 
 var app = builder.Build();
+
 
 app.UseCors("AllowAll");
 
@@ -39,7 +42,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseHttpsRedirection();
+
 app.MapControllers();
 
-app.Run();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "5072";
+app.Run($"http://0.0.0.0:{port}");

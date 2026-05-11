@@ -11,12 +11,13 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Commodity>().ToTable("commodity_prices");
+        base.OnModelCreating(modelBuilder);
         
-        modelBuilder.Entity<Commodity>().Property(x => x.Id).HasColumnName("id");
-        modelBuilder.Entity<Commodity>().Property(x => x.Symbol).HasColumnName("symbol");
-        modelBuilder.Entity<Commodity>().Property(x => x.Price).HasColumnName("price");
-        modelBuilder.Entity<Commodity>().Property(x => x.Timestamp).HasColumnName("timestamp");
-        modelBuilder.Entity<Commodity>().Property(x => x.Source).HasColumnName("source");
+        modelBuilder.Entity<Commodity>(entity =>
+        {
+            entity.HasKey(e => e.Id);
+            entity.Property(e => e.Symbol).IsRequired();
+            entity.Property(e => e.Price).IsRequired();
+        });
     }
 }

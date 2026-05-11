@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\GitHub\\agro-data-engine\\src\\backend\\agrodata.api\\AgroData.API.csproj": {}
+    "C:\\GitHub\\agro-data-engine\\src\\backend\\AgroData.API\\AgroData.API.csproj": {}
   },
   "projects": {
-    "C:\\GitHub\\agro-data-engine\\src\\backend\\agrodata.api\\AgroData.API.csproj": {
+    "C:\\GitHub\\agro-data-engine\\src\\backend\\AgroData.API\\AgroData.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\GitHub\\agro-data-engine\\src\\backend\\agrodata.api\\AgroData.API.csproj",
+        "projectUniqueName": "C:\\GitHub\\agro-data-engine\\src\\backend\\AgroData.API\\AgroData.API.csproj",
         "projectName": "AgroData.API",
-        "projectPath": "C:\\GitHub\\agro-data-engine\\src\\backend\\agrodata.api\\AgroData.API.csproj",
+        "projectPath": "C:\\GitHub\\agro-data-engine\\src\\backend\\AgroData.API\\AgroData.API.csproj",
         "packagesPath": "C:\\Users\\Everton L. de Souza\\.nuget\\packages\\",
-        "outputPath": "C:\\GitHub\\agro-data-engine\\src\\backend\\agrodata.api\\obj\\",
+        "outputPath": "C:\\GitHub\\agro-data-engine\\src\\backend\\AgroData.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

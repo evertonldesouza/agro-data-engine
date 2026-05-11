@@ -1,0 +1,21 @@
+services:
+  - type: web
+    name: agro-data-api
+    runtime: docker
+    plan: free
+    region: ohio
+    envVars:
+      - key: ConnectionStrings__DefaultConnection
+        value: "Host=aws-1-us-west-1.pooler.supabase.com;Port=6543;Database=postgres;Username=postgres.bthkbhyusxwzcvskihww;Password=#Freidenberg22;Pooling=false"
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+
+  - type: web
+    name: agro-data-frontend
+    runtime: static
+    plan: free
+    buildCommand: cd src/frontend && npm install && npm run build
+    publishPath: src/frontend/dist
+    envVars:
+      - key: VITE_API_URL
+        value: https://agro-data-api.onrender.com
