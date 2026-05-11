@@ -9,7 +9,7 @@ function App() {
   const fetchData = async () => {
     try {
       
-      const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:5072';
+      const baseUrl = import.meta.env.VITE_API_URL || 'https://agro-data-engine.onrender.com';
       const response = await fetch(`${baseUrl}/api/Commodities`);
       
       if (!response.ok) throw new Error("Erro na API");
@@ -47,7 +47,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#121212] p-8 text-white">
-      {/* Header */}
+      {}
       <header className="flex justify-between items-center mb-10 border-b border-[#2D5A27]/30 pb-4">
         <div className="flex items-center gap-3">
           <Leaf className="text-[#2D5A27] w-8 h-8" />
@@ -61,7 +61,7 @@ function App() {
         </div>
       </header>
 
-      {/* Gráfico */}
+      {}
       <div className="grid grid-cols-1 gap-6">
         <div className="bg-[#1C1C1C] p-6 rounded-xl border border-gray-800 shadow-xl">
           <div className="flex justify-between items-center mb-6">
@@ -88,7 +88,7 @@ function App() {
                   itemStyle={{ color: '#fff' }}
                 />
                 <Legend />
-                {/* AJUSTE 3: Duas linhas com cores diferentes */}
+                {}
                 <Line 
                   name="Soja (R$)" 
                   type="monotone" 
