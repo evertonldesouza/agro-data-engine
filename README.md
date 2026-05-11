@@ -1,29 +1,25 @@
-# AgroData Engine 🌾🚜
+# Agro Data Engine 🌿🚜
 
-O **AgroData Engine** é uma plataforma de inteligência de dados voltada para o setor agrícola. O sistema automatiza a coleta de preços de commodities (Soja e Milho), processa tendências de mercado através de engenharia de dados e fornece um dashboard moderno para suporte à tomada de decisão.
+Plataforma fullstack de monitoramento de commodities (Milho e Soja) em tempo real. O projeto demonstra a integração entre Engenharia de Dados (Python), Backend escalável (.NET) e uma interface reativa (React).
 
----
+## 🏛️ Arquitetura do Sistema
+O sistema foi desenhado seguindo os princípios de **Clean Architecture**, garantindo que as regras de negócio sejam independentes de frameworks e bancos de dados.
 
-## 🚀 A Solução
-No volátil mercado agrícola, o monitoramento de preços é crucial. Este projeto resolve isso através de:
-- **Pipeline de Dados Automatizado:** Um worker em Python que extrai, limpa e armazena dados do mercado.
-- **Inteligência de Tendências:** Cálculo de médias móveis e volatilidade para identificar oportunidades.
-- **API Profissional:** Backend em .NET 8 seguindo os princípios de **Clean Architecture**.
-- **Interface Moderna:** Dashboard em React com visualização de dados em tempo real e suporte a modo escuro/claro.
+- **AgroData.Domain:** Entidades de negócio e interfaces de repositório.
+- **AgroData.Application:** DTOs, Mappers e lógica de serviços.
+- **AgroData.Infrastructure:** Implementação do Data Context (EF Core) e Repositórios.
+- **AgroData.API:** Endpoints REST e configuração de injeção de dependência.
 
 ## 🛠️ Tecnologias Utilizadas
-- **Linguagens:** C#, Python, TypeScript.
-- **Backend:** .NET 8 (Web API, Clean Architecture, JWT, EF Core).
-- **Engenharia de Dados:** Python (SQLAlchemy, Pandas).
-- **Banco de Dados:** PostgreSQL (Docker / Supabase).
-- **Frontend:** React + Tailwind CSS.
-- **Infraestrutura:** Docker, GitHub Actions, Render.
+- **Linguagens:** C# (Backend), Python (Data Engine), JavaScript (Frontend).
+- **Banco de Dados:** PostgreSQL via Docker.
+- **Estilização:** Tailwind CSS v4.
+- **Visualização:** Recharts para gráficos de tendência.
 
-## 🏗️ Arquitetura
-O projeto foi construído com foco em **manutenibilidade** e **escalabilidade**:
-1. **Domain-Driven:** A lógica de negócio principal é isolada de frameworks externos.
-2. **Serviços Desacoplados:** O Pipeline de dados em Python funciona de forma independente da Web API.
-3. **Conteinerização:** Ambiente totalmente reproduzível utilizando Docker Compose.
+## 🚀 Como Executar
+1. Suba o banco via Docker: `docker-compose up -d`
+2. Inicie a API: `cd src/backend/AgroData.API && dotnet run`
+3. Inicie o Frontend: `cd src/frontend && npm run dev`
 
 ---
 *Desenvolvido como parte de uma jornada de evolução profissional de tecnologias legadas para uma Stack Moderna.*
