@@ -3,7 +3,7 @@ services:
   - type: web
     name: agro-data-api
     runtime: docker
-    plan: free
+    plan: starter 
     region: ohio
     envVars:
       - key: ConnectionStrings__DefaultConnection
@@ -15,9 +15,9 @@ services:
   - type: web
     name: agro-data-frontend
     runtime: static
-    plan: free
+    plan: free 
     buildCommand: "cd src/frontend && npm install && npm run build"
-    staticPublishPath: "src/frontend/dist" 
+    staticPublishPath: "src/frontend/dist"
     envVars:
       - key: VITE_API_URL
         value: https://agro-data-api.onrender.com
