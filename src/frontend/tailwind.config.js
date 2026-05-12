@@ -7,11 +7,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        agro: {
-          green: '#2D5A27', 
-          graphite: '#1C1C1C', 
-        }
-      }
+        'agro-green': '#2D5A27',
+        'agro-graphite': '#141414',
+      },
+      fontFamily: {
+        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
