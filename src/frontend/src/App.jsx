@@ -113,11 +113,12 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 font-sans flex flex-col">
+    <div className="min-h-screen bg-[#0a0a0a] text-gray-100 font-sans flex flex-col overflow-hidden">
 
       {/* Header com tickers integrados */}
       <header className="border-b border-white/5 bg-[#0d0d0d]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-stretch gap-0 flex-wrap">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center gap-0 flex-wrap">
+
 
           {/* Logo */}
           <div className="flex items-center gap-3 pr-8 mr-2">
